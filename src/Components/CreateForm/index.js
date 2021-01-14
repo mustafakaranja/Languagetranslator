@@ -1,26 +1,15 @@
 import React, { useState } from "react";
-import { Flag, Header } from "semantic-ui-react";
+import { Segment, Flag, Grid, Header } from "semantic-ui-react";
 import ButtonForm from "../Button";
 import Fieldform from "../Fields";
 
-const Createform = () => {
-  const [LanguageChange, setLanguageChange] = useState("english");
+//
+
+const Createform = (value) => {
   return (
     <div>
-      <Header as="h3">
-        {" "}
-        translate to:
-        <Header.Content>
-          <Flag name="us" onClick={(e) => setLanguageChange("english")} />
-          <Flag name="eg" onClick={(e) => setLanguageChange("Egypt")} />
-          <Flag name="fr" onClick={(e) => setLanguageChange("France")} />
-          <Flag name="in" onClick={(e) => setLanguageChange("India")} />
-        </Header.Content>
-      </Header>
-
       <Fieldform />
       <ButtonForm />
-      {LanguageChange}
     </div>
   );
 };
